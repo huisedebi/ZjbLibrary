@@ -17,6 +17,6 @@ allprojects {
 
 dependencies {
 
-	compile 'com.github.huisedebi:ZjbLibrary:0.0.9'
+	compile 'com.github.huisedebi:ZjbLibrary:0.1.5'
 	
 }
