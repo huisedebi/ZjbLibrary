@@ -17,7 +17,7 @@ import huisedebi.zjb.mylibrary.model.OkObject;
 /**
  * Created by Administrator on 2017/8/27.
  */
-public class ApiClient {
+public class ApiHeaderClient {
 
 
     public interface CallBack {
@@ -35,10 +35,12 @@ public class ApiClient {
     }
 
     public static void post(Context context, OkObject okObject, final CallBack callBack) {
+        LogUtil.LogShitou("ApiClient--头部", "" + okObject.getHeaders().toJSONString());
         LogUtil.LogShitou("ApiClient--发送", "" + okObject.getJson());
 
         OkGo.<String>post(okObject.getUrl())
                 .tag(context)
+                .headers(okObject.getHeaders())
                 .upJson(okObject.getJson())
                 .execute(new StringCallback() {
                     @Override
@@ -58,8 +60,10 @@ public class ApiClient {
     }
 
     public static void get(Context context, OkObject okObject, final CallBack callBack) {
+        LogUtil.LogShitou("ApiClient--头部", "" + okObject.getHeaders().toJSONString());
         OkGo.<String>get(okObject.getUrl())
                 .tag(context)
+                .headers(okObject.getHeaders())
                 .execute(new StringCallback() {
                     @Override
                     public void onSuccess(Response<String> response) {
@@ -76,9 +80,11 @@ public class ApiClient {
     }
 
     public static void postJson(Context context, String url, HttpHeaders httpHeaders, String json, final CallBack callBack) {
+        LogUtil.LogShitou("ApiClient--头部", "" + httpHeaders.toJSONString());
         LogUtil.LogShitou("ApiClient--发送", "" + json);
         OkGo.<String>post(url)
                 .tag(context)
+                .headers(httpHeaders)
                 .upJson(json)
                 .execute(new StringCallback() {
                     @Override
@@ -100,9 +106,11 @@ public class ApiClient {
      * date： 2017/11/8 0008 上午 11:40
      */
     public static void upFiles(Context context, OkObject okObject, List<File> files, final UpLoadCallBack callBack) {
+        LogUtil.LogShitou("ApiClient--头部", "" + okObject.getHeaders().toJSONString());
         LogUtil.LogShitou("ApiClient--发送", "" + okObject.getJson());
         OkGo.<String>post(okObject.getUrl())
                 .tag(context)
+                .headers(okObject.getHeaders())
                 .addFileParams("upload", files)
                 .execute(new StringCallback() {
                     @Override
@@ -128,10 +136,12 @@ public class ApiClient {
      * date： 2017/11/8 0008 上午 11:40
      */
     public static void upFile(Context context, OkObject okObject, File files, final UpLoadCallBack callBack) {
+        LogUtil.LogShitou("ApiClient--头部", "" + okObject.getHeaders().toJSONString());
         LogUtil.LogShitou("ApiClient--发送", "" + okObject.getJson());
         LogUtil.LogShitou("ApiClient--upFile", ""+files.getPath());
         OkGo.<String>post(okObject.getUrl())
                 .tag(context)
+                .headers(okObject.getHeaders())
                 .params("upload", files)
                 .execute(new StringCallback() {
                     @Override
