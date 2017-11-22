@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#484744</color>
+    <color name="colorPrimaryDark">#484744</color>
+    <color name="colorAccent">#484744</color>
+    <color name="basic_color">#e3c787</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="light_black">#444444</color>
+    <color name="line_gray">#f0f0f0</color>
+    <color name="text_gray">#999999</color>
+    <color name="ligthBasic">#ccc1a7</color>
+    <color name="background">#f4f4f4</color>
+    <color name="tranblack">#66000000</color>
+    <color name="tranwhite">#66ffffff</color>
+    <color name="tran">#00ffffff</color>
+</resources>

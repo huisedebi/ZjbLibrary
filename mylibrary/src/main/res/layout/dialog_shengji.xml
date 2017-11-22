@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:background="@drawable/shape_white_5dp"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_margin="5dp"
+        android:src="@drawable/cancle_selector"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/imageViewCancle"
+        android:layout_gravity="right"/>
+
+    <TextView
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="18dp"
+        android:textColor="@color/basic_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发现新版本"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_margin="20dp"
+        android:scrollbars="vertical"
+        android:lines="10"
+        android:textColor="@color/light_black"
+        android:lineSpacingExtra="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvShengJi"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:layout_marginBottom="20dp"
+        android:textSize="16dp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/selector_btn_5dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="立即升级"
+        android:id="@+id/buttonShengJi"
+        android:layout_gravity="center_horizontal"/>
+</LinearLayout>
