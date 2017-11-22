@@ -14,10 +14,10 @@ import java.util.List;
  * @author Administrator
  * @date 2015/12/31
  */
-public class MyApplication extends MultiDexApplication {
+public class ZjbApplication extends MultiDexApplication {
     private static Context context;
     private List<Activity> activityList = new LinkedList<Activity>();
-    private static MyApplication instance;
+    private static ZjbApplication instance;
 
     @Override
     public void onCreate() {
@@ -33,9 +33,9 @@ public class MyApplication extends MultiDexApplication {
     /**
      * 单例模式中获取唯一的MyApplication实例
      */
-    public static MyApplication getInstance() {
+    public static ZjbApplication getInstance() {
         if (null == instance) {
-            instance = new MyApplication();
+            instance = new ZjbApplication();
         }
         return instance;
     }
