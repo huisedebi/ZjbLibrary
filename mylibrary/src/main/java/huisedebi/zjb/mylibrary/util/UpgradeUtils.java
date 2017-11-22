@@ -45,7 +45,6 @@ import java.util.HashMap;
 
 import huisedebi.zjb.mylibrary.BuildConfig;
 import huisedebi.zjb.mylibrary.R;
-import huisedebi.zjb.mylibrary.application.ZjbApplication;
 import huisedebi.zjb.mylibrary.model.OkObject;
 
 
@@ -132,7 +131,6 @@ public class UpgradeUtils extends Activity {
                     public boolean onKey(DialogInterface dialog, int keyCode, KeyEvent event) {
                         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
                             dialog.dismiss();
-                            ZjbApplication.getInstance().exit();
                             // 杀掉进程
                             Process.killProcess(Process.myPid());
                             System.exit(0);
@@ -173,7 +171,6 @@ public class UpgradeUtils extends Activity {
                 public void onClick(View view) {
                     if (upgrade.getUpStatus() == 1) {
                         alertDialog.dismiss();
-                        ZjbApplication.getInstance().exit();
                         // 杀掉进程
                         Process.killProcess(Process.myPid());
                         System.exit(0);
@@ -221,7 +218,7 @@ public class UpgradeUtils extends Activity {
                     .setNegativeButton("取消", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            ZjbApplication.getInstance().exit();
+                            Process.killProcess(Process.myPid());
                             System.exit(0);
                         }
                     }).show();
