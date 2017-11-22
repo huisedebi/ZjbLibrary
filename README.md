@@ -1,4 +1,6 @@
 # ZjbLibrary怎么使用
+[![](https://jitpack.io/v/huisedebi/ZjbLibrary.svg)](https://jitpack.io/#huisedebi/ZjbLibrary)
+
 allprojects {
 
 	repositories {
@@ -17,6 +19,6 @@ allprojects {
 
 dependencies {
 
-	compile 'com.github.huisedebi:ZjbLibrary:0.1.5'
+	compile 'com.github.huisedebi:ZjbLibrary:<lastVersion>'
 	
 }
