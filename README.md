@@ -22,3 +22,6 @@ dependencies {
 	compile 'com.github.huisedebi:ZjbLibrary:<lastVersion>'
 	
 }
+
+该项目应用demo apk 
+https://www.pgyer.com/ZPf9
