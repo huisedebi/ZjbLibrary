@@ -33,8 +33,8 @@ public class StringUtil {
      * @param password
      * @return
      */
-    public static boolean isPassword(String password,int length) {
-        String pass = "^(?=.*?[a-zA-Z])(?=.*?[0-9])[a-zA-Z0-9]{"+length+",}$";
+    public static boolean isPassword(String password, int length) {
+        String pass = "^(?=.*?[a-zA-Z])(?=.*?[0-9])[a-zA-Z0-9]{" + length + ",}$";
         if (TextUtils.isEmpty(password)) {
             return false;
         } else {
@@ -79,6 +79,12 @@ public class StringUtil {
         return flag;
     }
 
+    /**
+     * 是否是车牌
+     *
+     * @param carId
+     * @return
+     */
     public static boolean isCarID(String carId) {
         String telRegex = "[\\u4e00-\\u9fa5|WJ]{1}[A-Z0-9]{6}";
         if (TextUtils.isEmpty(carId)) {
@@ -118,10 +124,15 @@ public class StringUtil {
         return district.contains("县") ? district.substring(0, district.length() - 1) : city.substring(0, city.length() - 1);
     }
 
-    private static Pattern pattern = Pattern.compile("^(([1-9]{1}\\d*)|([0]{1}))(\\.(\\d){0,2})?$"); // 判断小数点后2位的数字的正则表达式
+    /**
+     * 判断小数点后2位的数字的正则表达式
+     */
+    private static Pattern pattern = Pattern.compile("^(([1-9]{1}\\d*)|([0]{1}))(\\.(\\d){0,2})?$");
 
 
-    //金额验证
+    /**
+     * 金额验证
+     */
     public static boolean isAmount(String str) {
         Matcher match = pattern.matcher(str);
         if (match.matches() == false) {
